@@ -193,11 +193,11 @@ vector<float> Diagonal_Multiplication::diagonalMultiply(int thread, int is_paral
   C.resize(dim*dim);
   float test=0.0; 
  // if(is_parallel==1)
-  	omp_set_num_threads(thread);
+  omp_set_num_threads(thread);
 
   //computing super-diagonal and main-diagonal
 
-  #pragma omp parallel if(is_parallel==1) shared(C, diagMatrixA, diagMatrixB) private(i,j,k)
+  #pragma omp parallel shared(C, diagMatrixA, diagMatrixB) private(i,j,k)
         {
           
            
@@ -292,7 +292,7 @@ vector<float> Diagonal_Multiplication::diagonalMultiply(int thread, int is_paral
       #pragma omp parallel shared(C, diagMatrixA, diagMatrixB) private(i,j,k)
       {
            
-           int start_index7, start_index8, start_index9, start_index10, start_index11, start_index12;
+           int start_index7, start_index8, start_index9, start_index10, start_index11, start_index12, start_index;
           
          #pragma omp for schedule(dynamic) reduction(+:test)
         for ( k = 1; k <= n - 1; k++) { //7
