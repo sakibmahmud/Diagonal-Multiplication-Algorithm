@@ -1,3 +1,3 @@
 # Diagonal-Multiplication-Algorithm
-C++ code with OpenMP 
+#C++ code with OpenMP 
 We present a storage scheme for storing matrices by diagonals and algorithms for performing matrix-matrix and matrix-vector multiplication by diagonals. Matrix elements are accessed with stride-1 and involve no indirect referencing. Access to the transposed matrix requires no additional effort. The proposed storage scheme handles dense matrices and matrices with special structure e.g., banded, triangular, symmetric in a uniform manner. Test results from preliminary numerical experiments with an OpenMP implementation of our method are encouraging.
