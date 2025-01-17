@@ -7,3 +7,9 @@ standardMultiplyKIJ() : Multiplying C= A x B using KIJ version.
 standardMultiplyIKJ() :  Multiplying C= A x B using IKJ version.
 diagonalMultiply(int thread, int is_parallel): This function performs the diagonal multiplication C = A x B using diagonal multiplication algorithm. The parallel version of this algorithm uses openmp. You can turn off the parallel code by commenting out pragma block or using is_parallel bool. 
 getIndex(): to get start index of a diagonal in a 1-D vector that stores a matrix diagonally. 
+
+#How to Run?
+Please make sure you have OpenMP and a g++ compiler installed. 
+git clone https://github.com/sakibmahmud/Diagonal-Multiplication-Algorithm.git
+cd Diagonal-Multiplication-Algorithm
+g++ filename.cc -o out.exe
